@@ -3,119 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Itapeva - Recuperação de Crédito</title>
+    <title>FEIRÃO ITAPEVA - Até 95% OFF</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-       
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', system_ui, sans-serif;
         }
-       
+        
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('hero-bg.jpg') center/cover no-repeat;
+            background: linear-gradient(135deg, #10b981 0%, #eab308 100%);
+            background-size: cover;
             background-position: center;
         }
-       
+        
+        .title-stroke {
+            text-shadow: 
+                -3px -3px 0 #1e40af,
+                3px -3px 0 #1e40af,
+                -3px 3px 0 #1e40af,
+                3px 3px 0 #1e40af;
+        }
+        
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-       
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-       
-        .section-title {
-            position: relative;
-        }
-       
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: #22c55e;
+            z-index: 50;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- HEADER -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<body class="hero-bg min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-md py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl">I</div>
+                <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">I</div>
                 <div>
-                    <h1 class="text-2xl font-bold text-gray-900">Itapeva</h1>
-                    <p class="text-xs text-gray-500 -mt-1">Recuperação de Crédito</p>
+                    <span class="text-2xl font-black tracking-tighter text-emerald-700">ITAPEVA</span>
                 </div>
             </div>
-           
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#negociar" class="hover:text-green-600 transition-colors">Negociar Dívida</a>
-                <a href="#servicos" class="hover:text-green-600 transition-colors">Serviços</a>
-                <a href="#depoimentos" class="hover:text-green-600 transition-colors">Depoimentos</a>
-                <a href="#sobre" class="hover:text-green-600 transition-colors">Sobre Nós</a>
-            </nav>
-           
-            <div class="flex items-center gap-4">
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#" class="hover:text-emerald-600 transition">Início</a>
+                <a href="#" class="hover:text-emerald-600 transition">Como funciona</a>
+                <a href="#" class="hover:text-emerald-600 transition">Dúvidas</a>
+            </div>
+            <a href="https://wa.me/5511965100327" target="_blank"
+               class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 transition">
+                <i class="fab fa-whatsapp"></i>
+                Falar no WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-1 flex items-center">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="space-y-8">
+                <div class="inline-block bg-yellow-400 text-emerald-900 font-black text-5xl md:text-7xl px-8 py-3 rounded-2xl -rotate-2 shadow-xl">
+                    FEIRÃO
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none title-stroke">
+                    ITAPEVA
+                </h1>
+                
+                <div class="bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-2xl max-w-md">
+                    <div class="bg-blue-600 text-white text-5xl md:text-6xl font-black px-8 py-4 rounded-2xl inline-block mb-6">
+                        Até 95% OFF
+                    </div>
+                    <p class="text-2xl md:text-3xl font-semibold text-gray-800 leading-tight">
+                        para você desenrolar<br>a sua dívida.
+                    </p>
+                </div>
+
+                <!-- CPF Button -->
+                <a href="https://wa.me/5511965100327?text=Ol%C3%A1!%20Quero%20consultar%20meu%20CPF%20no%20Feir%C3%A3o%20Itapeva." 
+                   target="_blank"
+                   class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-2xl font-bold px-12 py-6 rounded-full shadow-2xl transition transform hover:scale-105 active:scale-95">
+                    Consulte seu CPF
+                </a>
+
+                <div class="text-white/90 text-lg flex items-center gap-3">
+                    <div class="flex-1 h-px bg-white/50"></div>
+                    <span class="font-medium">ou</span>
+                    <div class="flex-1 h-px bg-white/50"></div>
+                </div>
+
                 <a href="https://wa.me/5511965100327" target="_blank"
-                   class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 transition-colors">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>Falar no WhatsApp</span>
+                   class="inline-flex items-center gap-4 bg-white text-emerald-700 hover:bg-emerald-50 px-8 py-5 rounded-3xl font-semibold text-xl transition shadow-xl">
+                    <i class="fab fa-whatsapp text-4xl"></i>
+                    <div>
+                        <div class="text-emerald-600">Falar agora no WhatsApp</div>
+                        <div class="text-sm opacity-75">(11) 96510-0327</div>
+                    </div>
                 </a>
-                <button onclick="window.location.href='#consulta'"
-                        class="border border-gray-300 hover:border-gray-400 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors">
-                    Consultar CPF/CNPJ
-                </button>
+            </div>
+
+            <!-- Right Image -->
+            <div class="relative flex justify-center md:justify-end">
+                <div class="relative">
+                    <img id="hero-image" 
+                         src="/home/workdir/attachments/WhatsApp Image 2026-06-23 at 16.40.07.jpeg" 
+                         alt="Homem sorrindo consultando celular" 
+                         class="rounded-3xl shadow-2xl max-w-full md:max-w-lg border-8 border-white">
+                    
+                    <!-- Overlay text on image -->
+                    <div class="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md px-8 py-6 rounded-3xl shadow-xl max-w-[220px]">
+                        <div class="text-emerald-700 font-bold text-2xl leading-none">Feirão</div>
+                        <div class="text-emerald-700 font-black text-4xl -mt-1">Itapeva</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </main>
 
-    <!-- HERO (com nova imagem) -->
-    <section class="hero-bg text-white py-24">
-        <div class="max-w-4xl mx-auto text-center px-6">
-            <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                Recupere sua vida financeira
-            </h2>
-            <p class="text-xl md:text-2xl mb-10 text-gray-200">
-                Negocie suas dívidas com os <span class="text-green-400 font-semibold">melhores descontos</span> e volte a crescer.
-            </p>
-           
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="https://wa.me/5511965100327?text=Quero%20negociar%20minha%20d%C3%ADvida" target="_blank"
-                   class="bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3 transition-all">
-                    <i class="fab fa-whatsapp text-3xl"></i>
-                    QUERO NEGOCIAR AGORA
-                </a>
-               
-                <button onclick="document.getElementById('consulta').scrollIntoView({behavior: 'smooth'})"
-                        class="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-10 py-5 rounded-2xl text-xl font-semibold transition-all">
-                    CONSULTAR MINHA DÍVIDA
-                </button>
+    <!-- Footer -->
+    <footer class="bg-white/95 py-8 border-t">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center items-center gap-8 text-sm text-gray-600">
+                <a href="#" class="hover:text-emerald-600">Política de Privacidade</a>
+                <a href="#" class="hover:text-emerald-600">Termos de Uso</a>
             </div>
-           
-            <p class="mt-8 text-sm opacity-75">Já tem cadastro? <a href="#" class="underline hover:text-green-400">Acesse o portal</a></p>
+            <div class="mt-6 text-xs text-gray-500">
+                © 2026 Itapeva Recuperação de Crédito • Todos os direitos reservados
+            </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- RESTO DO CONTEÚDO (mantido igual) -->
-    <!-- ... (o resto do HTML que você enviou permanece inalterado) ... -->
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511965100327" target="_blank"
+       class="whatsapp-float bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
+    <script>
+        // Tailwind script already loaded
+        console.log('%c✅ Site Feirão Itapeva carregado com sucesso!', 'color: #10b981; font-size: 16px; font-weight: bold');
+        
+        // Make image responsive and add fallback
+        document.getElementById('hero-image').onerror = function() {
+            this.style.background = '#10b981';
+            this.style.height = '500px';
+            this.style.display = 'flex';
+            this.style.alignItems = 'center';
+            this.style.justifyContent = 'center';
+            this.style.color = 'white';
+            this.style.fontSize = '18px';
+            this.innerHTML = 'Imagem do Feirão Itapeva';
+        };
+    </script>
 </body>
 </html>
