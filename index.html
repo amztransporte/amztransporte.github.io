@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMZ Transportes LTDA | Transporte e Comércio em Vilhena-RO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1077/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 bg-amber-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl">A</div>
+                <div class="font-bold text-3xl tracking-tight">AMZ <span class="text-amber-600">Transportes</span></div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#inicio" class="hover:text-amber-600 transition-colors">Início</a>
+                <a href="#sobre" class="hover:text-amber-600 transition-colors">Sobre</a>
+                <a href="#servicos" class="hover:text-amber-600 transition-colors">Serviços</a>
+                <a href="#contato" class="hover:text-amber-600 transition-colors">Contato</a>
+            </div>
+            
+            <a href="tel:+556984168686" class="bg-amber-600 text-white px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 hover:bg-amber-700 transition-all">
+                <i class="fa-solid fa-phone"></i> (69) 8416-8686
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6">
+                Transporte e Comércio<br>de Qualidade
+            </h1>
+            <p class="text-2xl max-w-2xl mx-auto mb-10">AMZ Transportes LTDA — Eficiência, segurança e pontualidade em Rondônia e Brasil.</p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#servicos" class="bg-amber-600 hover:bg-amber-700 px-10 py-4 rounded-3xl text-lg font-semibold transition-all">Ver Serviços</a>
+                <a href="#contato" class="border-2 border-white hover:bg-white hover:text-zinc-900 px-10 py-4 rounded-3xl text-lg font-semibold transition-all">Solicitar Orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold mb-8">AMZ Transportes LTDA</h2>
+                    <p class="text-lg text-zinc-600 mb-6">Empresa especializada em transporte rodoviário de cargas e mudanças, além de comércio varejista de doces, livros e artigos de papelaria.</p>
+                    <p class="text-zinc-600">CNPJ: <strong>20.685.842/0001-31</strong></p>
+                </div>
+                <div class="bg-zinc-100 p-8 rounded-3xl">
+                    <h3 class="font-semibold mb-4 text-xl">Endereço</h3>
+                    <p class="text-zinc-700">
+                        Rua Walter Dourado, 5313<br>
+                        Sala 01 - Setor 02, Quadra 23, Lote 14<br>
+                        Centro (5º BEC) — Vilhena, RO<br>
+                        CEP: 76.988-048
+                    </p>
+                    <div class="mt-8 flex flex-col gap-3 text-sm">
+                        <p><strong>Telefone:</strong> (69) 8416-8686</p>
+                        <p><strong>E-mail:</strong> cafeeletas.vilhena@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-24 bg-zinc-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold">Nossos Serviços</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-3xl border">
+                    <div class="text-5xl mb-6">🚛</div>
+                    <h3 class="text-2xl font-semibold mb-3">Transporte de Carga</h3>
+                    <p class="text-zinc-600">Municipal, intermunicipal, interestadual e internacional (exceto produtos perigosos).</p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-3xl border">
+                    <div class="text-5xl mb-6">🏠</div>
+                    <h3 class="text-2xl font-semibold mb-3">Transporte de Mudanças</h3>
+                    <p class="text-zinc-600">Mudanças residenciais e comerciais com segurança e organização.</p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-3xl border">
+                    <div class="text-5xl mb-6">🍭</div>
+                    <h3 class="text-2xl font-semibold mb-3">Comércio de Doces</h3>
+                    <p class="text-zinc-600">Doces, balas, bombons e produtos semelhantes.</p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-3xl border">
+                    <div class="text-5xl mb-6">📖</div>
+                    <h3 class="text-2xl font-semibold mb-3">Comércio de Livros</h3>
+                    <p class="text-zinc-600">Livros para todos os gostos e necessidades.</p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-3xl border">
+                    <div class="text-5xl mb-6">📝</div>
+                    <h3 class="text-2xl font-semibold mb-3">Papelaria</h3>
+                    <p class="text-zinc-600">Artigos de papelaria, material escolar e escritório.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-5xl font-bold mb-8">Entre em Contato</h2>
+                    <p class="text-xl text-zinc-600">Estamos prontos para atender sua solicitação com agilidade e profissionalismo.</p>
+                    <div class="mt-12 space-y-8">
+                        <div class="flex gap-5">
+                            <i class="fa-solid fa-phone text-3xl text-amber-600"></i>
+                            <div>
+                                <p class="font-medium">(69) 8416-8686</p>
+                                <p class="text-sm text-zinc-500">WhatsApp e telefone</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <i class="fa-solid fa-envelope text-3xl text-amber-600"></i>
+                            <div>
+                                <p class="font-medium">cafeeletas.vilhena@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contactForm" onsubmit="handleSubmit(event)" class="space-y-6 bg-zinc-50 p-10 rounded-3xl">
+                    <input type="text" placeholder="Seu nome" required class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-amber-600">
+                    <input type="tel" placeholder="Telefone / WhatsApp" required class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-amber-600">
+                    <textarea placeholder="Descreva o serviço que precisa (carga, mudança, etc.)" rows="5" required class="w-full px-6 py-4 rounded-3xl border focus:outline-none focus:border-amber-600"></textarea>
+                    <button type="submit" class="w-full bg-amber-600 text-white py-5 rounded-3xl font-semibold text-lg hover:bg-amber-700 transition-all">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-sm text-zinc-400">© 2026 AMZ Transportes LTDA • CNPJ 20.685.842/0001-31</p>
+            <p class="text-xs text-zinc-500 mt-2">Vilhena • Rondônia</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert("✅ Mensagem enviada com sucesso! Entraremos em contato em breve.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
