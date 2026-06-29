@@ -1,376 +1,240 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Itapeva - Recuperação de Crédito</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Portal do Cliente - Mobilize Financial Services</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/fr/thumb/4/41/Mobilize_FS_Logo.svg/200px-Mobilize_FS_Logo.svg.png" type="image/png">
     <style>
-        :root {
-            --primary-color: #063055;
-            --secondary-color: #24b6f3;
-            --accent-color: #9FCF3A;
-            --text-color: #333;
-            --white: #ffffff;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
         }
-
+        
         body {
-            background-color: #f4f7f6;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--white);
-            padding: 15px 5%;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #003087 0%, #0052cc 100%);
+            color: #333;
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            justify-content: center;
         }
-
-        .logo img {
-            height: 50px;
+        
+        .container {
+            max-width: 420px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
         }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-
-        .btn-entrar {
-            background-color: var(--accent-color);
-            color: var(--white) !important;
-            padding: 8px 20px;
-            border-radius: 20px;
-        }
-
-        /* Banner Section */
-        .hero {
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-            color: var(--white);
-            padding: 60px 5%;
+        
+        .header {
+            background: #003087;
+            color: white;
+            padding: 30px 20px;
             text-align: center;
         }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        
+        .logo {
+            max-width: 220px;
+            margin: 0 auto 20px;
         }
-
-        .hero p {
-            font-size: 1.2rem;
+        
+        .title {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .welcome {
+            text-align: center;
             margin-bottom: 30px;
         }
-
-        .consult-box {
-            background-color: var(--primary-color);
-            padding: 40px 5%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            color: var(--white);
+        
+        .welcome h2 {
+            color: #003087;
+            margin-bottom: 10px;
         }
-
-        .consult-box h2 {
-            font-size: 1.5rem;
+        
+        .form-group {
+            margin-bottom: 20px;
         }
-
-        .consult-box input {
-            padding: 12px 20px;
-            border-radius: 5px;
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        input:focus {
+            border-color: #003087;
+            outline: none;
+        }
+        
+        .btn-login {
+            width: 100%;
+            background: #003087;
+            color: white;
             border: none;
-            width: 300px;
-        }
-
-        .consult-box button {
-            background-color: var(--accent-color);
-            color: var(--white);
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 8px;
             cursor: pointer;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* Services */
-        .services {
-            padding: 60px 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card i {
-            font-size: 3rem;
-            color: var(--secondary-color);
+            transition: all 0.3s;
             margin-bottom: 20px;
         }
-
-        .service-card h3 {
-            margin-bottom: 15px;
-            color: var(--primary-color);
+        
+        .btn-login:hover {
+            background: #002366;
+            transform: translateY(-2px);
         }
-
-        .btn-action {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 25px;
-            background-color: var(--accent-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 700;
-        }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+        
+        .whatsapp-section {
             text-align: center;
-            font-size: 35px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
         }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 60px 5% 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-section ul li a {
-            color: #ccc;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .footer-section ul li a:hover {
-            color: var(--white);
-        }
-
-        .social-links a {
-            color: var(--white);
-            font-size: 20px;
-            margin-right: 15px;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-        }
-
-        .contact-info p {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-whatsapp-direct {
-            background-color: #25d366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
+        
+        .whatsapp-btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            margin-top: 10px;
+            gap: 12px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
         }
-
-        .copyright {
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+        
+        .whatsapp-logo {
+            width: 28px;
+            height: 28px;
+        }
+        
+        .qr-section {
+            margin-top: 25px;
+        }
+        
+        .qr-code {
+            max-width: 180px;
+            margin: 15px auto;
+            border: 8px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .footer {
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            font-size: 12px;
-            color: #888;
+            padding: 20px;
+            background: #f8f9fa;
+            font-size: 0.85rem;
+            color: #666;
         }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            nav ul li {
-                margin: 5px 10px;
-            }
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            .consult-box input {
-                width: 100%;
-            }
+        
+        .info {
+            text-align: center;
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="logo">
-            <img src="https://itapevarec.com.br/Nembus/Images/logo.png" alt="Itapeva Logo">
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/41/Mobilize_FS_Logo.svg/800px-Mobilize_FS_Logo.svg.png" 
+                 alt="Mobilize Financial Services Logo" 
+                 class="logo">
+            <h1 class="title">Portal do Cliente</h1>
+            <p class="subtitle">Mobilize Financial Services</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Conheça a Itapeva</a></li>
-                <li><a href="#">Canais de Atendimento</a></li>
-                <li><a href="#">2ª Via de Boleto</a></li>
-                <li><a href="#" class="btn-entrar">Entrar</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Feirão Itapeva: Até 95% OFF</h1>
-        <p>Recomece agora com os melhores descontos do mercado.</p>
-        <a href="https://wa.me/5511965100327" class="btn-whatsapp-direct">
-            <i class="fab fa-whatsapp"></i> Negociar pelo WhatsApp
-        </a>
-    </section>
-
-    <section class="consult-box">
-        <h2>Consulte seu CPF/CNPJ</h2>
-        <input type="text" placeholder="Digite aqui seu CPF/CNPJ">
-        <button type="button">Consultar</button>
-    </section>
-
-    <section class="services">
-        <div class="service-card">
-            <i class="fas fa-handshake"></i>
-            <h3>Negociar Agora</h3>
-            <p>Ajudamos você a negociar suas dívidas com os melhores descontos.</p>
-            <a href="https://wa.me/5511965100327" class="btn-action">Quero Negociar</a>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-file-invoice-dollar"></i>
-            <h3>Solicitar Documentos</h3>
-            <p>2ª via de boleto, Carta de Quitação e Notificação de Cessão.</p>
-            <a href="#" class="btn-action">Acessar</a>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-users"></i>
-            <h3>Histórias de Clientes</h3>
-            <p>Conheça pessoas que recuperaram suas vidas financeiras.</p>
-            <a href="#" class="btn-action">Acessar</a>
-        </div>
-    </section>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5511965100327" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <img src="https://itapevarec.com.br/Nembus/Images/ITAPEVA_LOGO_NEGATIVO.png" alt="Itapeva Logo" style="height: 40px; margin-bottom: 20px;">
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
+        
+        <!-- Content -->
+        <div class="content">
+            <div class="welcome">
+                <h2>Olá! Bem-vindo</h2>
+                <p>Para acessar sua conta ou falar com nosso suporte, utilize o WhatsApp oficial.</p>
+            </div>
+            
+            <div class="info">
+                <strong>Suporte e Atendimento</strong><br>
+                Segunda a Sexta, 8h às 18h
+            </div>
+            
+            <!-- Botão WhatsApp -->
+            <a href="https://wa.me/5511966739587" 
+               target="_blank"
+               class="whatsapp-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                     alt="WhatsApp" 
+                     class="whatsapp-logo">
+                Falar no WhatsApp
+            </a>
+            
+            <div class="whatsapp-section">
+                <p><strong>Ou escaneie o QR Code abaixo:</strong></p>
+                
+                <!-- QR Code (substitua pelo seu QR gerado) -->
+                <div class="qr-section">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://wa.me/5511966739587" 
+                         alt="QR Code WhatsApp" 
+                         class="qr-code">
                 </div>
-            </div>
-            <div class="footer-section">
-                <h4>Sobre a Itapeva</h4>
-                <ul>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Antifraude</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Atendimento</h4>
-                <div class="contact-info">
-                    <p><i class="fas fa-phone"></i> 0800 770 5989</p>
-                    <p><i class="fab fa-whatsapp"></i> 11 96510-0327</p>
-                    <a href="https://wa.me/5511965100327" class="btn-whatsapp-direct">
-                        <i class="fab fa-whatsapp"></i> Fale Conosco
-                    </a>
-                </div>
+                <p style="font-size: 0.9rem; color: #666;">
+                    Aponte a câmera do seu celular para este QR Code
+                </p>
             </div>
         </div>
-        <div class="copyright">
-            <p>© Copyright 2021-2026 - Todos os direitos reservados - Replicado com personalização de WhatsApp.</p>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 Mobilize Financial Services</p>
+            <p>Este é um site demonstrativo para direcionamento de atendimento.</p>
         </div>
-    </footer>
+    </div>
 
+    <script>
+        // Simulação de login (opcional)
+        document.querySelector('.btn-login').addEventListener('click', function(e) {
+            if (confirm('Redirecionando para o WhatsApp oficial...')) {
+                window.open('https://wa.me/5511966739587', '_blank');
+            }
+        });
+    </script>
 </body>
 </html>
