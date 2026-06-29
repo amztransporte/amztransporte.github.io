@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal do Cliente - Mobilize Financial Services</title>
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/fr/thumb/4/41/Mobilize_FS_Logo.svg/200px-Mobilize_FS_Logo.svg.png" type="image/png">
+    <link rel="icon" href="https://www.mobilize-fs.com.br/wp-content/uploads/2023/10/favicon.png" type="image/png"> <!-- Favicon aproximado -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
         
@@ -16,57 +16,51 @@
         
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #003087 0%, #0052cc 100%);
-            color: #333;
-            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #333;
         }
         
         .container {
-            max-width: 420px;
-            width: 100%;
             background: white;
+            width: 100%;
+            max-width: 420px;
             border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
         
         .header {
             background: #003087;
             color: white;
-            padding: 30px 20px;
+            padding: 25px 20px;
             text-align: center;
         }
         
         .logo {
             max-width: 220px;
-            margin: 0 auto 20px;
-        }
-        
-        .title {
-            font-size: 1.4rem;
-            margin-bottom: 8px;
-        }
-        
-        .subtitle {
-            font-size: 1rem;
-            opacity: 0.9;
+            height: auto;
         }
         
         .content {
             padding: 40px 30px;
         }
         
-        .welcome {
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
             text-align: center;
-            margin-bottom: 30px;
+            color: #003087;
         }
         
-        .welcome h2 {
-            color: #003087;
-            margin-bottom: 10px;
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 15px;
         }
         
         .form-group {
@@ -75,23 +69,24 @@
         
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 500;
-            color: #555;
+            color: #444;
         }
         
         input {
             width: 100%;
-            padding: 14px;
-            border: 2px solid #e0e0e0;
+            padding: 14px 16px;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            font-size: 1rem;
-            transition: all 0.3s;
+            font-size: 16px;
+            transition: border 0.3s;
         }
         
         input:focus {
-            border-color: #003087;
             outline: none;
+            border-color: #003087;
+            box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.1);
         }
         
         .btn-login {
@@ -99,77 +94,95 @@
             background: #003087;
             color: white;
             border: none;
-            padding: 15px;
-            font-size: 1.1rem;
-            font-weight: 500;
+            padding: 14px;
             border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
-            margin-bottom: 20px;
+            margin-top: 10px;
+            transition: background 0.3s;
         }
         
         .btn-login:hover {
-            background: #002366;
-            transform: translateY(-2px);
+            background: #00205a;
         }
         
-        .whatsapp-section {
+        .links {
             text-align: center;
-            margin-top: 30px;
-            padding-top: 25px;
-            border-top: 1px solid #eee;
-        }
-        
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s;
-        }
-        
-        .whatsapp-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-        }
-        
-        .whatsapp-logo {
-            width: 28px;
-            height: 28px;
-        }
-        
-        .qr-section {
             margin-top: 25px;
         }
         
+        .links a {
+            color: #003087;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-float img {
+            width: 35px;
+            height: 35px;
+        }
+        
+        .qr-section {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        
+        .qr-section h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
         .qr-code {
-            max-width: 180px;
-            margin: 15px auto;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 15px;
             border: 8px solid #fff;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
         }
         
-        .footer {
+        footer {
             text-align: center;
             padding: 20px;
+            font-size: 12px;
+            color: #888;
             background: #f8f9fa;
-            font-size: 0.85rem;
-            color: #666;
         }
         
-        .info {
+        .alert {
+            background: #fff3cd;
+            color: #856404;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 20px;
             text-align: center;
-            color: #555;
-            font-size: 0.95rem;
-            margin-bottom: 25px;
         }
     </style>
 </head>
@@ -177,63 +190,88 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/41/Mobilize_FS_Logo.svg/800px-Mobilize_FS_Logo.svg.png" 
-                 alt="Mobilize Financial Services Logo" 
-                 class="logo">
-            <h1 class="title">Portal do Cliente</h1>
-            <p class="subtitle">Mobilize Financial Services</p>
+            <img src="https://www.mobilize-fs.com.br/wp-content/uploads/2023/10/logo-mobilize.png" 
+                 alt="Mobilize Financial Services" 
+                 class="logo"
+                 onerror="this.src='https://via.placeholder.com/220x80/003087/ffffff?text=MOBILIZE+FS';">
         </div>
         
-        <!-- Content -->
         <div class="content">
-            <div class="welcome">
-                <h2>Olá! Bem-vindo</h2>
-                <p>Para acessar sua conta ou falar com nosso suporte, utilize o WhatsApp oficial.</p>
+            <h1>Portal do Cliente</h1>
+            <p class="subtitle">Acesse sua conta Mobilize Financial Services</p>
+            
+            <!-- Alerta de simulação -->
+            <div class="alert">
+                Este é um site demonstrativo para contato via WhatsApp
             </div>
             
-            <div class="info">
-                <strong>Suporte e Atendimento</strong><br>
-                Segunda a Sexta, 8h às 18h
-            </div>
-            
-            <!-- Botão WhatsApp -->
-            <a href="https://wa.me/5511966739587" 
-               target="_blank"
-               class="whatsapp-btn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                     alt="WhatsApp" 
-                     class="whatsapp-logo">
-                Falar no WhatsApp
-            </a>
-            
-            <div class="whatsapp-section">
-                <p><strong>Ou escaneie o QR Code abaixo:</strong></p>
-                
-                <!-- QR Code (substitua pelo seu QR gerado) -->
-                <div class="qr-section">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://wa.me/5511966739587" 
-                         alt="QR Code WhatsApp" 
-                         class="qr-code">
+            <!-- Formulário de Login (simulado) -->
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="usuario">Usuário / CPF / CNPJ</label>
+                    <input type="text" id="usuario" placeholder="Digite seu usuário ou CPF" required>
                 </div>
-                <p style="font-size: 0.9rem; color: #666;">
-                    Aponte a câmera do seu celular para este QR Code
-                </p>
+                
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+                
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            
+            <div class="links">
+                <a href="#">Esqueci minha senha</a>
+                <a href="#">Primeiro acesso</a>
+            </div>
+            
+            <!-- Seção WhatsApp e QR Code -->
+            <div class="qr-section">
+                <h3>Fale conosco pelo WhatsApp</h3>
+                <a href="https://wa.me/5511966739587" 
+                   target="_blank" 
+                   style="display: inline-block; background: #25D366; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600; margin: 10px 0;">
+                    💬 Abrir WhatsApp Oficial
+                </a>
+                
+                <p style="margin: 15px 0 10px; font-size: 14px; color: #555;">Ou escaneie o QR Code:</p>
+                
+                <!-- QR Code gerado para o número -->
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/5511966739587" 
+                     alt="QR Code WhatsApp" 
+                     class="qr-code">
+                
+                <p style="font-size: 13px; color: #666;">+55 11 96673-9587</p>
             </div>
         </div>
         
-        <!-- Footer -->
-        <div class="footer">
-            <p>© 2026 Mobilize Financial Services</p>
-            <p>Este é um site demonstrativo para direcionamento de atendimento.</p>
-        </div>
+        <footer>
+            © 2026 Mobilize Financial Services - Todos os direitos reservados<br>
+            Este é um site demonstrativo para GitHub Pages
+        </footer>
     </div>
-
+    
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5511966739587" 
+       target="_blank" 
+       class="whatsapp-float">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" 
+             alt="WhatsApp">
+    </a>
+    
     <script>
-        // Simulação de login (opcional)
-        document.querySelector('.btn-login').addEventListener('click', function(e) {
-            if (confirm('Redirecionando para o WhatsApp oficial...')) {
-                window.open('https://wa.me/5511966739587', '_blank');
-            }
+        function handleLogin(e) {
+            e.preventDefault();
+            alert("🔗 Redirecionando para o WhatsApp oficial...\n\nNúmero: +55 11 96673-9587");
+            window.open("https://wa.me/5511966739587", "_blank");
+        }
+        
+        // Prevenir erros de logo
+        document.querySelector('.logo').addEventListener('error', function() {
+            this.style.background = '#003087';
+            this.style.color = 'white';
+            this.style.padding = '15px';
+            this.style.borderRadius = '8px';
         });
     </script>
 </body>
